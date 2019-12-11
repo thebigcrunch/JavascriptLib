@@ -35,6 +35,15 @@ TbcLib.dom.setBackgroundImage(imagePath);
 
 ### Color:
 
+| Function | Description | Inputs | 
+| -------- | ----------- | ------ | 
+| hexToRgb | Converts a hexadecimal color to rgb format, and returns it as object {r, g, b} | hexadecimal color (e.g. #02d3af or #03f) | 
+| getFullFormHex | Converts a 3 char shorthand hex color code or 6 char code | hexadecimal color (e.g. #02d3af or #03f) |
+| getInterpolatedColors | Returns an array of n colors between a start color and an end color | n => specifed by the input parameter *steps*; start color => color1; end color => color2 |
+| getIconColor | Gets an input color and returns the appropriate css properties to apply that color to an image or icon | hexadecimal color (e.g. #02d3af or #03f) |
+| blendColors | Gets an input array of rgb colors, mixes them and returns the blended rgba color (format: [r, g, b, a]) | array of rgb colors (e.g. [[r,g,b], [r,g,b]]) | 
+| getColorBrightness | This function is used to determine how bright or dark a color is. It returns a value between 0 and 255, 0 being the darkest and 255 being the lightest | hexadecimal color (e.g. #02d3af or #03f) |
+
 ### Date:
 
 ### DOM:
