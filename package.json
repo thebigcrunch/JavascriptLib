@@ -1,5 +1,5 @@
 {
-    "name": "javascriptlib",
+    "name": "TBCJavascriptLib",
     "version": "1.0.0",
     "description": "Javascript functions to assist with Big Crunch Visualisations and formulas",
     "main": "index.js",
