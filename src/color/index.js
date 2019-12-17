@@ -1,5 +1,7 @@
 "use strict";
 
+const randomColor = require("../color/randomColor.js");
+
 //https://stackoverflow.com/questions/5623838/rgb-to-hex-and-hex-to-rgb
 function hexToRgb(hex) {
   const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(
@@ -388,6 +390,7 @@ module.exports = {
   getIconColor,
   blendColors,
   getColorBrightness,
+  randomColor,
   Color,
   Solver
 };

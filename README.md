@@ -9,7 +9,7 @@ In your vizzy code, add a script tag as follows:
 <script src="/tbc_lib.js"></script>
 ```
 
-To use the **isEmpty()** function from *std.js*, use the following syntax:
+To use the **isEmpty()** function from **std.js**, use the following syntax:
 ```
 if(TbcLib.std.isEmpty(value)){
     return "Empty Value";

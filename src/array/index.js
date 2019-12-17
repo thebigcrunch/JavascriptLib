@@ -16,4 +16,44 @@ function getColumnFromArray(inputArray, columnIndex) {
   });
 }
 
-module.exports = { getValidRowsFromArray, getColumnFromArray };
+function getMaxValueFromArray(inputArray, columnIndex = 0) {
+  return Math.max(
+    ...inputArray.map(function(row) {
+      return row[columnIndex];
+    })
+  );
+}
+
+function getMinValueFromArray(inputArray, columnIndex = 0) {
+  return Math.min(
+    ...inputArray.map(function(row) {
+      return row[columnIndex];
+    })
+  );
+}
+
+function getNumbersBetweenMinMaxValues(minValue, maxValue) {
+  let result = [];
+  for (let i = minValue; i <= maxValue; i++) {
+    result.push(i);
+  }
+  return result;
+}
+
+function getNumbersByStepBetweenMinMaxValues(minValue, maxValue, step) {
+  let result = [];
+  let stepFactor = maxValue / step;
+  for (let i = minValue; i <= step; i++) {
+    result.push(i * stepFactor);
+  }
+  return result;
+}
+
+module.exports = {
+  getValidRowsFromArray,
+  getColumnFromArray,
+  getMaxValueFromArray,
+  getMinValueFromArray,
+  getNumbersBetweenMinMaxValues,
+  getNumbersByStepBetweenMinMaxValues
+};

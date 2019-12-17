@@ -34,7 +34,7 @@ function getUnit(unit) {
 }
 
 function formatLabel(label, unitString) {
-  let unit = getUnit(unitString);
+  const unit = getUnit(unitString);
   if (isNaN(label)) {
     return label;
   } else {
@@ -42,4 +42,20 @@ function formatLabel(label, unitString) {
   }
 }
 
-module.exports = { getUnit, formatLabel };
+function getAxisTickLabels(data) {
+  const labels = data.ticks;
+  const numberOfDataPoints = Math.floor(labels.length / 20);
+  const maxChars = window.innerWidth > 450 ? 30 : 15;
+  labels.forEach(function(label, i) {
+    if (labels.length > 25) {
+      if (i % numberOfDataPoints !== 1) {
+        labels[i] = "";
+      }
+    }
+    if (labels[i].length > maxChars) {
+      labels[i] = labels[i].substr(0, maxChars - 3) + "...";
+    }
+  });
+}
+
+module.exports = { getUnit, formatLabel, getAxisTickLabels };
