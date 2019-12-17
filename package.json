@@ -2,7 +2,7 @@
     "name": "TBCJavascriptLib",
     "version": "1.0.0",
     "description": "Javascript functions to assist with Big Crunch Visualisations and formulas",
-    "main": "index.js",
+    "main": "src/index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "build": "webpack --mode production --output-library TbcLib --output-filename tbc_lib.js",
