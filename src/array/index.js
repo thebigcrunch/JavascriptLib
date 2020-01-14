@@ -1,7 +1,7 @@
 "use strict";
 
-const std = require("../std/index.js");
-const date = require("../date/index.js");
+const std = require("../std/index");
+const date = require("../date/index");
 
 function getValidRowsFromArray(inputArray, columnIndex = 0) {
   return inputArray.map(function(row) {
