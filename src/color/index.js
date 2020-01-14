@@ -1,6 +1,6 @@
 "use strict";
 
-const randomColor = require("../color/generaterandomcolor");
+const randomColor = require("../color/randomcolor");
 
 //https://stackoverflow.com/questions/5623838/rgb-to-hex-and-hex-to-rgb
 function hexToRgb(hex) {
