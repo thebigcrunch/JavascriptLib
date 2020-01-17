@@ -20,7 +20,7 @@ function getColumnFromArray(inputArray, columnIndex) {
 function getMaxValueFromArray(inputArray, columnIndex = 0) {
   return Math.max(
     ...inputArray.map(function(row) {
-      return row[columnIndex];
+      return getValueFromRow(row, columnIndex);
     })
   );
 }
@@ -28,9 +28,17 @@ function getMaxValueFromArray(inputArray, columnIndex = 0) {
 function getMinValueFromArray(inputArray, columnIndex = 0) {
   return Math.min(
     ...inputArray.map(function(row) {
-      return row[columnIndex];
+      return getValueFromRow(row, columnIndex);
     })
   );
+}
+
+function getValueFromRow(row, columnIndex){
+  if(Array.isArray(row)){
+    return row[columnIndex];
+  }else{
+    return row;
+  }
 }
 
 function getNumbersBetweenMinMaxValues(minValue, maxValue) {
@@ -50,12 +58,14 @@ function getNumbersByStepBetweenMinMaxValues(minValue, maxValue, step) {
   return result;
 }
 
-function flipData(array) {
-  return array[0].map((col, i) => array.map(row => row[i]));
+function flipData(inputArray) {
+  return inputArray[0].map((col, i) => inputArray.map(row => row[i]));
 }
 
-function arrayContainsOnlyNumbers(array) {
-  return !array.some(isNaN);
+function arrayContainsOnlyNumbers(inputArray, columnIndex = 0) {
+  return !inputArray.some(function(row){
+    return isNaN(getValueFromRow(row, columnIndex));
+  });
 }
 
 function parseNumbersInColumn(singleDimensionArray) {
