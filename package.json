@@ -17,7 +17,7 @@
     "dependencies": {
         "buffer": "^4.9.2",
         "chalk": "^2.4.2",
-        "decode-uri-component": "^0.2.0",
+        "decode-uri-component": "^0.2.1",
         "define-property": "^2.0.2",
         "detect-file": "^1.0.0",
         "domain-browser": "^1.2.0",
